@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Listening to the update-search event emitted by SearchBar -->
     <SearchBar @update-search="updateSearch" ref="searchBarRef"/>
     <label>
       Sort By: 
@@ -11,7 +10,6 @@
         <option value="parish">Parish</option>
       </select>
     </label>
-    <!-- Passing the currentPageRestaurants to the RestaurantList component -->
     <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
     <div v-else>No results</div>
     <!-- Pagination -->
@@ -24,10 +22,10 @@
 </template>
 
 <script>
-  import { useRestaurantsStore } from '@/stores/restaurants';
   import SearchBar from '@/components/SearchBar.vue';
   import RestaurantList from '@/components/RestaurantList.vue';
   import _ from 'lodash';
+  import axios from 'axios';
 
   export default {
     name: 'ListingView',
@@ -37,6 +35,7 @@
     },
     data() {
       return {
+        restaurants: [],
         filteredRestaurants: [],
         sortBy: 'name',
         currentPageRestaurants: [],
@@ -54,10 +53,14 @@
     },
     methods: {
       async fetchRestaurants() {
-        const store = useRestaurantsStore();
-        await store.fetchRestaurants();
-        this.filteredRestaurants = store.restaurants;
-        this.sortRestaurants();
+        try {
+          const response = await axios.get('http://localhost:3002/restaurants');
+          this.restaurants = response.data;
+          this.filteredRestaurants = this.restaurants;
+          this.sortRestaurants();
+        } catch (error) {
+          console.error("Error fetching restaurants:", error);
+        }
       },
       sortRestaurants() {
         this.filteredRestaurants = _.orderBy(this.filteredRestaurants, this.sortBy);
@@ -82,12 +85,10 @@
         }
       },
       updateSearch(searchCriteria) {
-        const store = useRestaurantsStore();
-        console.log('Search Criteria: ', searchCriteria);
-        this.filteredRestaurants = store.restaurants.filter(restaurant => {
+        this.filteredRestaurants = this.restaurants.filter(restaurant => {
           let matches = true;
           if (searchCriteria.name) {
-            matches = matches && restaurant.name.toLowerCase().includes(searchCriteria.name.toLowerCase());
+            matches = matches && restaurant.restaurantName.toLowerCase().includes(searchCriteria.name.toLowerCase());
           }
           if (searchCriteria.district) {
             matches = matches && restaurant.district === searchCriteria.district;
@@ -103,6 +104,8 @@
           }
           return matches;
         });
+
+        this.sortRestaurants();
         
         this.currentPage = 1;
         this.updatePageRestaurants();

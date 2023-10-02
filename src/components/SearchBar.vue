@@ -12,7 +12,7 @@
     <div>
       <label>
         District: 
-        <select v-model="selectedDistrict" @change="loadCities">
+        <select v-model="selectedDistrict">
           <option v-for="district in districts" :key="district.id" :value="district.id">
             {{ district.name }}
           </option>
@@ -21,7 +21,7 @@
 
       <label>
         City: 
-        <select v-model="selectedCity" @change="loadParishes">
+        <select v-model="selectedCity">
           <option v-for="city in cities" :key="city.id" :value="city.id">
             {{ city.name }}
           </option>
@@ -53,7 +53,7 @@
 
 <script>
   import locationsData from "@/locationsData.js";
-  import { useRestaurantsStore } from '@/stores/restaurants';
+  import axios from 'axios';
 
   export default {
     name: 'SearchBar',
@@ -68,14 +68,8 @@
         parishes: [],
         showReset: false,
         selectedCategories: [],
+        allCategories: [],
       };
-    },
-    computed: {
-      allCategories() {
-        const store = useRestaurantsStore();
-        const allTags = store.restaurants.flatMap(restaurant => restaurant.tags);
-        return [...new Set(allTags)]; // Returns unique categories
-      },
     },
     methods: {
       loadCities() {
@@ -104,20 +98,36 @@
         this.showReset = true;
         this.$emit('update-search', {
           name: this.searchName,
-          district: this.districts.find(district => district.id === this.selectedDistrict)?.name,
-          city: this.cities.find(city => city.id === this.selectedCity)?.name,
-          parish: this.parishes.find(parish => parish.id === this.selectedParish)?.name,
+          district: this.selectedDistrict,
+          city: this.selectedCity,
+          parish: this.selectedParish,
           selectedCategories: this.selectedCategories,
         });
       },
+      async fetchCategories() {
+        try {
+          const response = await axios.get('http://localhost:3002/restaurants');
+          const restaurants = response.data;
+          const allTags = restaurants.flatMap(restaurant => restaurant.tags);
+          this.allCategories = [...new Set(allTags)];
+        } catch (error) {
+          console.error("Error fetching restaurants for categories:", error);
+        }
+      },
     },
     watch: {
-      searchName(newValue) {
-        if (newValue.length >= 3 || newValue.length === 0) {
-          this.$emit('update-search', {
-            name: this.searchName,
-          });
+      searchName(newVal) {
+        if (newVal.length >= 3 || newVal.length === 0) {
+          this.search();
         }
+      },
+      selectedDistrict(newVal) {
+        this.selectedCity = null;
+        this.cities = locationsData.cities.filter(city => city.districtId === newVal);
+      },
+      selectedCity(newVal) {
+        this.selectedParish = null;
+        this.parishes = locationsData.parishes.filter(parish => parish.cityId === newVal);
       },
       selectedCategories() {
         this.search();
@@ -126,6 +136,8 @@
     mounted() {
       this.loadCities(); // Load cities initially based on the selected district
       this.loadParishes(); // Load parishes initially based on the selected city
+       // Fetch and set categories
+      this.fetchCategories();
     }
   };
 </script>

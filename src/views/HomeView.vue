@@ -6,19 +6,14 @@
 </template>
   
 <script>
-import { useRestaurantsStore } from '@/stores/restaurants';
-import LatestRestaurants from '@/components/LatestRestaurants.vue';
+  import LatestRestaurants from '@/components/LatestRestaurants.vue';
 
-export default {
-  components: {
-    LatestRestaurants,
-  },
-  name: 'HomeView',
-  mounted() {
-    const store = useRestaurantsStore();
-    store.fetchRestaurants();
-  },
-};
+  export default {
+    components: {
+      LatestRestaurants,
+    },
+    name: 'HomeView',
+  };
 </script>
   
 <style scoped>

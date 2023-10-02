@@ -31,13 +31,22 @@
         </option>
       </select>
     </label>
+
+    <div class="tags">
+      <h4>Select Tags</h4>
+      <div v-for="tag in availableTags" :key="tag">
+        <input type="checkbox" :value="tag" v-model="selectedTags" />
+        <label>{{ tag }}</label>
+      </div>
+    </div>
     
     <button type="submit">Submit</button>
-    <div class="error">{{ errorMessage }}</div>
+    <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
   </form>
 </template>
 
 <script>
+  import axios from 'axios';
   import locationsData from "@/locationsData.js";
 
   export default {
@@ -51,6 +60,8 @@
         districts: locationsData.districts,
         cities: [],
         parishes: [],
+        availableTags: ["Gorjeta na conta", "Só fala inglês", "Atende turistas primeiro"],
+        selectedTags: [],
         errorMessage: '',
       };
     },
@@ -67,7 +78,25 @@
       },
       submitForm() {
         if (this.isValidForm()) {
-          this.$router.push('/success'); 
+          const formData = {
+            restaurantName: this.restaurantName,
+            district: this.selectedDistrict,
+            city: this.selectedCity,
+            parish: this.selectedParish,
+            tags: this.selectedTags,
+          };
+          
+          axios.post('http://localhost:3002/restaurants', formData)
+            .then(response => {
+              if (response.status >= 200 && response.status < 300) {
+                this.$router.push('/success');
+              } else {
+                this.errorMessage = "There was an unexpected response. Please try again later.";
+              }
+            })
+            .catch(error => {
+              this.errorMessage = 'There was an error submitting the form. Please try again later.';
+            });
         }
       },
       isValidForm() {
@@ -98,7 +127,15 @@
           valid = false;
         }
 
+        if (!this.isValidTags()) {
+          this.errorMessage = 'Please select at least one category tag.';
+          valid = false;
+        }
+
         return valid;
+      },
+      isValidTags() {
+        return this.selectedTags && this.selectedTags.length > 0;
       },
       detectMaliciousPattern(input) {
         const pattern = /['"();<>&]/;
