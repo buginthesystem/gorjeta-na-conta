@@ -1,8 +1,8 @@
 <template>
-  <form @submit.prevent="submitForm">
+  <form @submit.prevent="submitForm" novalidate>
     <label>
       Restaurant Name:
-      <input v-model="restaurantName" type="text" required />
+      <input v-model="restaurantName" type="text" @input="clearError" required />
     </label>
     
     <label>
@@ -33,6 +33,7 @@
     </label>
     
     <button type="submit">Submit</button>
+    <div class="error">{{ errorMessage }}</div>
   </form>
 </template>
 
@@ -50,6 +51,7 @@
         districts: locationsData.districts,
         cities: [],
         parishes: [],
+        errorMessage: '',
       };
     },
     methods: {
@@ -65,18 +67,55 @@
       },
       submitForm() {
         if (this.isValidForm()) {
-          // TBD: Submit form
-        } else {
-          alert('Please fill in all fields correctly.');
+          this.$router.push('/success'); 
         }
       },
       isValidForm() {
-        // Validate form fields
-        return this.restaurantName && this.selectedDistrict && this.selectedCity && this.selectedParish;
+        let valid = true;
+
+        if (!this.restaurantName) {
+          this.errorMessage = 'Os campos são de preenchimento obrigatório.';
+          valid = false;
+        } else if (this.detectMaliciousPattern(this.restaurantName)) {
+          this.errorMessage = 'Caracteres inválidos.';
+          valid = false;
+        } else {
+          this.errorMessage = '';
+        }
+
+        if (!this.selectedDistrict) {
+          this.errorMessage = 'Os campos são de preenchimento obrigatório.';
+          valid = false;
+        }
+
+        if (!this.selectedCity) {
+          this.errorMessage = 'Os campos são de preenchimento obrigatório.';
+          valid = false;
+        }
+
+        if (!this.selectedParish) {
+          this.errorMessage = 'Os campos são de preenchimento obrigatório.';
+          valid = false;
+        }
+
+        return valid;
       },
+      detectMaliciousPattern(input) {
+        const pattern = /['"();<>&]/;
+        return pattern.test(input);
+      },
+      clearError() {
+        this.errorMessage = '';
+      }
     },
   };
 </script>
 
 <style scoped>
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+  display: block;
+}
 </style>
