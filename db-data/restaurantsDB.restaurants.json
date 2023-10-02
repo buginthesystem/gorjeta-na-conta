@@ -1,0 +1,216 @@
+[{
+  "_id": {
+    "$oid": "651b0d73bb5887e2c85ea5b7"
+  },
+  "restaurantName": "Migalhas",
+  "district": 1,
+  "city": 1,
+  "parish": 1,
+  "tags": [
+    "Gorjeta na conta",
+    "Só fala inglês",
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0d80bb5887e2c85ea5b9"
+  },
+  "restaurantName": "Fast Food",
+  "district": 2,
+  "city": 3,
+  "parish": 5,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0d93bb5887e2c85ea5bb"
+  },
+  "restaurantName": "Abelha Douro",
+  "district": 1,
+  "city": 2,
+  "parish": 3,
+  "tags": [
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0d9dbb5887e2c85ea5bd"
+  },
+  "restaurantName": "Barbatana",
+  "district": 2,
+  "city": 3,
+  "parish": 6,
+  "tags": [
+    "Só fala inglês"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0da6bb5887e2c85ea5bf"
+  },
+  "restaurantName": "Fiver",
+  "district": 2,
+  "city": 4,
+  "parish": 7,
+  "tags": [
+    "Gorjeta na conta",
+    "Só fala inglês",
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0db1bb5887e2c85ea5c1"
+  },
+  "restaurantName": "Bodega",
+  "district": 1,
+  "city": 1,
+  "parish": 2,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0dbfbb5887e2c85ea5c3"
+  },
+  "restaurantName": "Restaurante",
+  "district": 2,
+  "city": 3,
+  "parish": 5,
+  "tags": [
+    "Só fala inglês",
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0dc9bb5887e2c85ea5c5"
+  },
+  "restaurantName": "Maravilha",
+  "district": 3,
+  "city": 5,
+  "parish": 9,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0dd2bb5887e2c85ea5c7"
+  },
+  "restaurantName": "Marta",
+  "district": 1,
+  "city": 1,
+  "parish": 1,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0de5bb5887e2c85ea5c9"
+  },
+  "restaurantName": "Taberna",
+  "district": 3,
+  "city": 6,
+  "parish": 12,
+  "tags": [
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0deebb5887e2c85ea5cb"
+  },
+  "restaurantName": "Muralha",
+  "district": 4,
+  "city": 8,
+  "parish": 15,
+  "tags": [
+    "Gorjeta na conta",
+    "Só fala inglês",
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0df7bb5887e2c85ea5cd"
+  },
+  "restaurantName": "Ducky",
+  "district": 4,
+  "city": 7,
+  "parish": 13,
+  "tags": [
+    "Gorjeta na conta",
+    "Só fala inglês"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0e01bb5887e2c85ea5cf"
+  },
+  "restaurantName": "Kob",
+  "district": 4,
+  "city": 8,
+  "parish": 16,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b0e0dbb5887e2c85ea5d1"
+  },
+  "restaurantName": "Tell me more",
+  "district": 3,
+  "city": 5,
+  "parish": 10,
+  "tags": [
+    "Atente turistas primeiro"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b11fad1f1524762ba9d69"
+  },
+  "restaurantName": "Reds",
+  "district": 1,
+  "city": 1,
+  "parish": 1,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651b142cd1f1524762ba9d6d"
+  },
+  "restaurantName": "Testezinho",
+  "district": 1,
+  "city": 1,
+  "parish": 2,
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "__v": 0
+}]

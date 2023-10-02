@@ -46,12 +46,29 @@ Install MongoDB: Visit [MongoDB's official documentation](https://docs.mongodb.c
 Install MongoDB Compass for a GUI that provides a visual interface.
 
 
-#### Create the Database:
-```sh	
-restaurantsDB
-```
+#### Importing Data Using MongoDB Compass:
+##### Open MongoDB Compass and Connect:  
+Launch MongoDB Compass and connect to the MongoDB instance.
 
-The code should create a collection named restaurants.  
+##### Select Your Database (restaurantsDB):
+If the database doesn't already exist, you can create it by clicking on "CREATE DATABASE" button.
+
+##### Select Your Collection (restaurants):
+If the collection doesn't already exist, create it.
+
+##### Import Data:
+
+On the top menu, you'll see an option named "Collection".  
+Click on it and then select "Import Data". This will open an import dialog.
+
+* Select Input File: Choose the JSON file you want to import (db-data/restaurantsDB.restaurants.json).
+* Select Input File Type: Choose JSON.
+* Import: Click on the "Import" button.
+
+##### If you submit more data, export your database to share the new data
+
+##### Verify Data Import:
+Check if the list shows the imported data.  
 Look inside the server folder files for clues.
 
 ## Running the project
