@@ -2,7 +2,7 @@
   <form @submit.prevent="submitForm" novalidate>
     <label>
       Restaurant Name:
-      <input v-model="restaurantName" type="text" @input="clearError" required />
+      <input id="placesInput" v-model="restaurantName" type="text" @input="clearError" required />
     </label>
     
     <label>
@@ -143,8 +143,38 @@
       },
       clearError() {
         this.errorMessage = '';
-      }
+      },
+      googleMapsApiLoaded() {
+        console.log('Google Maps API has been loaded!');
+        const placesInput = document.getElementById('placesInput');
+        
+        const autocomplete = new google.maps.places.Autocomplete(placesInput, {
+            types: ['establishment'],
+            componentRestrictions: { country: 'PT' }
+        });
+
+        autocomplete.addListener('place_changed', () => {
+          const place = autocomplete.getPlace();
+          console.log(place);  
+          if (place.geometry) {
+              const lat = place.geometry.location.lat();
+              const lng = place.geometry.location.lng();
+              console.log(`Selected place coordinates: ${lat}, ${lng}`);
+          }
+        });
+      },
     },
+    mounted() {
+      if (!document.querySelector("#googlePlacesScript")) {
+        window.googleMapsApiLoaded = this.googleMapsApiLoaded;
+
+        const googleScript = document.createElement('script');
+        googleScript.id = "googlePlacesScript";
+        googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_API_KEY}&libraries=places&callback=googleMapsApiLoaded`;
+        googleScript.async = true;
+        document.head.appendChild(googleScript);
+      }
+    }
   };
 </script>
 
