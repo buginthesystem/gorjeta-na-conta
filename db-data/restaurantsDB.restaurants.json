@@ -2,215 +2,713 @@
   "_id": {
     "$oid": "651b0d73bb5887e2c85ea5b7"
   },
-  "restaurantName": "Migalhas",
-  "district": 1,
-  "city": 1,
-  "parish": 1,
+  "name": "Migalhas",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom1",
   "tags": [
     "Gorjeta na conta",
     "Só fala inglês",
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-02-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-02-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0d80bb5887e2c85ea5b9"
   },
-  "restaurantName": "Fast Food",
-  "district": 2,
-  "city": 3,
-  "parish": 5,
+  "name": "Fast Food",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom2",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-01-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0d93bb5887e2c85ea5bb"
   },
-  "restaurantName": "Abelha Douro",
-  "district": 1,
-  "city": 2,
-  "parish": 3,
+  "name": "Abelha Douro",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Porto",
+  "district": "Porto",
+  "place_id": "stringrandom3",
   "tags": [
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-01-05T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-05T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0d9dbb5887e2c85ea5bd"
   },
-  "restaurantName": "Barbatana",
-  "district": 2,
-  "city": 3,
-  "parish": 6,
+  "name": "Barbatana",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom4",
   "tags": [
     "Só fala inglês"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0da6bb5887e2c85ea5bf"
   },
-  "restaurantName": "Fiver",
-  "district": 2,
-  "city": 4,
-  "parish": 7,
+  "name": "Fiver",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom5",
   "tags": [
     "Gorjeta na conta",
     "Só fala inglês",
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-03-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0db1bb5887e2c85ea5c1"
   },
-  "restaurantName": "Bodega",
-  "district": 1,
-  "city": 1,
-  "parish": 2,
+  "name": "Bodega",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom6",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0dbfbb5887e2c85ea5c3"
   },
-  "restaurantName": "Restaurante",
-  "district": 2,
-  "city": 3,
-  "parish": 5,
+  "name": "Restaurante",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom7",
   "tags": [
     "Só fala inglês",
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-04-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0dc9bb5887e2c85ea5c5"
   },
-  "restaurantName": "Maravilha",
-  "district": 3,
-  "city": 5,
-  "parish": 9,
+  "name": "Maravilha",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom8",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-05-05T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0dd2bb5887e2c85ea5c7"
   },
-  "restaurantName": "Marta",
-  "district": 1,
-  "city": 1,
-  "parish": 1,
+  "name": "Marta",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom9",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-05-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0de5bb5887e2c85ea5c9"
   },
-  "restaurantName": "Taberna",
-  "district": 3,
-  "city": 6,
-  "parish": 12,
+  "name": "Taberna",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom10",
   "tags": [
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-07-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-07-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0deebb5887e2c85ea5cb"
   },
-  "restaurantName": "Muralha",
-  "district": 4,
-  "city": 8,
-  "parish": 15,
+  "name": "Muralha",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom11",
   "tags": [
     "Gorjeta na conta",
     "Só fala inglês",
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-08-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0df7bb5887e2c85ea5cd"
   },
-  "restaurantName": "Ducky",
-  "district": 4,
-  "city": 7,
-  "parish": 13,
+  "name": "Ducky",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom12",
   "tags": [
     "Gorjeta na conta",
     "Só fala inglês"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-09-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-09-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0e01bb5887e2c85ea5cf"
   },
-  "restaurantName": "Kob",
-  "district": 4,
-  "city": 8,
-  "parish": 16,
+  "name": "Kob",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom13",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-10-01T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-01T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b0e0dbb5887e2c85ea5d1"
   },
-  "restaurantName": "Tell me more",
-  "district": 3,
-  "city": 5,
-  "parish": 10,
+  "name": "Tell me more",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom14",
   "tags": [
-    "Atente turistas primeiro"
+    "Atende turistas primeiro"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-10-02T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-02T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b11fad1f1524762ba9d69"
   },
-  "restaurantName": "Reds",
-  "district": 1,
-  "city": 1,
-  "parish": 1,
+  "name": "Reds",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom15",
   "tags": [
     "Gorjeta na conta"
   ],
-  "__v": 0
+  "createdAt": {
+    "$date": "2023-10-03T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-03T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
 },
 {
   "_id": {
     "$oid": "651b142cd1f1524762ba9d6d"
   },
-  "restaurantName": "Testezinho",
-  "district": 1,
-  "city": 1,
-  "parish": 2,
+  "name": "Testezinho",
+  "address": "Rua 1 da Vila Maia 7, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "stringrandom16",
   "tags": [
     "Gorjeta na conta"
   ],
+  "createdAt": {
+    "$date": "2023-10-04T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-04T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "652045941639e96a2dcbaab6"
+  },
+  "name": "La Focacceria Pugliese (Benfica)",
+  "address": "Avenida do Colégio Militar 7B, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJSxanadXMHg0RRcamzk6lZUI",
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "createdAt": {
+    "$date": "1970-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:00:59.291Z"
+  },
+  "__v": 1,
+  "confirmations": 2,
+  "confirmers": [
+    "127.0.0.1",
+    "::1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65205cbc66278adf10ccec14"
+  },
+  "name": "Anema & Core",
+  "address": "Rua Correia Teles 22A, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJqQTTFFIzGQ0R-2XK9V2TCXk",
+  "tags": [
+    "Atende turistas primeiro"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T19:15:08.292Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6520611566278adf10ccec21"
+  },
+  "name": "O bitoque",
+  "address": "Rua Ferreira Borges 59 61, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJ-ea5rHwzGQ0RMaYYQM9PkiQ",
+  "tags": [
+    "Atende turistas primeiro"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T19:33:41.994Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T19:33:41.994Z"
+  },
+  "__v": 0,
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6520779a11da7c4718bfba4b"
+  },
+  "name": "Sakemico Tasting Room",
+  "address": "Travessa de São Plácido 52A, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJeyyw8F0zGQ0RSM6Bg6LuenI",
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "confirmations": 1,
+  "confirmers": [
+    "::1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T21:09:46.073Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:09:46.073Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65207b738b308dabb2f0f036"
+  },
+  "name": "Choco Do Bairro",
+  "address": "Rua Tenente Ferreira Durão 55 A, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJsz_8Z2czGQ0RIym84goMTwc",
+  "tags": [
+    "Atende turistas primeiro"
+  ],
+  "url": "https://maps.google.com/?cid=526652922318825763",
+  "confirmations": 1,
+  "confirmers": [
+    "::1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T21:26:11.960Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:26:11.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65207c258b308dabb2f0f03a"
+  },
+  "name": "Pastéis de Belém",
+  "address": "Rua de Belém 84 92, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJW3H9LkXLHg0RZZZttMb27_8",
+  "tags": [
+    "Atende turistas primeiro"
+  ],
+  "url": "https://maps.google.com/?cid=18442230332396508773",
+  "confirmations": 1,
+  "confirmers": [
+    "::1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T21:29:09.113Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:29:09.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65207ed88b308dabb2f0f045"
+  },
+  "name": "Palha",
+  "address": "Rua Bom Jesus da Cruz 18, Barcelos",
+  "city": "Barcelos",
+  "district": "Braga",
+  "place_id": "ChIJfZscjzNSJA0R27eESbsqV9U",
+  "tags": [
+    "Só fala inglês"
+  ],
+  "url": "https://maps.google.com/?cid=15372802836933162971",
+  "confirmations": 1,
+  "confirmers": [
+    "::1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T21:40:40.363Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:40:40.363Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6520821c8b308dabb2f0f049"
+  },
+  "name": "MERCADO DA RIBEIRA",
+  "address": "Avenida 24 de Julho 49, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJr8noDQ81GQ0RQi8_yjKsRYw",
+  "tags": [
+    "Só fala inglês"
+  ],
+  "url": "https://maps.google.com/?cid=10107674272844427074",
+  "confirmations": 1,
+  "confirmers": [
+    "::1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T21:54:36.185Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T21:54:36.185Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6520889819b7c15003fe4c1a"
+  },
+  "name": "Pérgola da Foz",
+  "address": "Avenida do Brasil 694, Porto",
+  "city": "Porto",
+  "district": "Porto",
+  "place_id": "ChIJDySWRgtvJA0RWdWHcqDYhjg",
+  "tags": [
+    "Só fala inglês"
+  ],
+  "url": "https://maps.google.com/?cid=4073181096631063897",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T22:22:16.712Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T22:22:16.712Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652091d219b7c15003fe4c1e"
+  },
+  "name": "Jockey",
+  "address": "Sociedade Hípica Portuguesa - Hipódromo do, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJMQUZwuMyGQ0RGMfI09lpJUQ",
+  "tags": [
+    "Gorjeta na conta"
+  ],
+  "url": "https://maps.google.com/?cid=4910447352999364376",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T23:01:38.979Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T23:01:38.979Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6520978b4bfe761c356e16cf"
+  },
+  "name": "Amélia Lisboa",
+  "address": "Rua Ferreira Borges 101, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJz7Mew2YzGQ0RqC8D468aEjk",
+  "tags": [
+    "Só fala inglês"
+  ],
+  "url": "https://maps.google.com/?cid=4112378752472919976",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-06T23:26:03.024Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-06T23:26:03.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6520a2bf3888ade478495278"
+  },
+  "name": "Polargel",
+  "address": "Zona Industrial Vilamoura Lote 6.I 1/43 F, Quarteira",
+  "city": "Quarteira",
+  "district": "Faro",
+  "place_id": "ChIJ_WosA2K3Gg0RZkAsbsuAxiY",
+  "tags": [
+    "Só fala inglês"
+  ],
+  "url": "https://maps.google.com/?cid=2794062230045081702",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-07T00:13:51.591Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-07T00:13:51.591Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6520a351600d4bf28bdd9034"
+  },
+  "name": "Previmed, Lda.",
+  "address": "Avenida da Liberdade 244 3º andar, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJ8-G9nXczGQ0RsR3RIBJ7Il0",
+  "tags": [
+    "Atende turistas primeiro"
+  ],
+  "url": "https://maps.google.com/?cid=6711061712525663665",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-07T00:16:17.700Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-07T00:16:17.700Z"
+  },
   "__v": 0
 }]

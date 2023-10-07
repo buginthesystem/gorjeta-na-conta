@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="latest-restaurants">
     <h2 class="mb-4">Latest Restaurants</h2>
     <div v-if="error" class="error">{{ error }}</div>
     <RestaurantList :restaurants="latestRestaurants" />
@@ -25,7 +25,7 @@
     mounted() {
       axios.get('http://localhost:3002/restaurants')
         .then(response => {
-          this.latestRestaurants = response.data.slice(-5).reverse();
+          this.latestRestaurants = response.data.slice(-3).reverse();
         })
         .catch(error => {
           console.error("Error fetching latest restaurants:", error);
@@ -35,7 +35,21 @@
   };
 </script>
   
-<style scoped>
+<style lang="scss">
+  .latest-restaurants {
+    .restaurant-list {
+      .restaurant-item {
+        border: 1px solid red;
+        border-radius: 8px;
+        padding: 0.5rem;
+
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+  
   .error {
     color: red;
     margin-bottom: 1rem;

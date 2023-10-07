@@ -7,7 +7,7 @@
         <option value="name">Name</option>
         <option value="district">District</option>
         <option value="city">City</option>
-        <option value="parish">Parish</option>
+        <option value="createdAt">Most Recently Added</option>
       </select>
     </label>
     <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
@@ -63,7 +63,11 @@
         }
       },
       sortRestaurants() {
-        this.filteredRestaurants = _.orderBy(this.filteredRestaurants, this.sortBy);
+        if (this.sortBy === 'createdAt') {
+          this.filteredRestaurants = _.orderBy(this.filteredRestaurants, [this.sortBy], ['desc']);
+        } else {
+          this.filteredRestaurants = _.orderBy(this.filteredRestaurants, this.sortBy);
+        }
         this.currentPage = 1;
         this.updatePageRestaurants();
       },
@@ -87,21 +91,18 @@
       updateSearch(searchCriteria) {
         this.filteredRestaurants = this.restaurants.filter(restaurant => {
           let matches = true;
+          
           if (searchCriteria.name) {
-            matches = matches && restaurant.restaurantName.toLowerCase().includes(searchCriteria.name.toLowerCase());
-          }
-          if (searchCriteria.district) {
-            matches = matches && restaurant.district === searchCriteria.district;
-          }
-          if (searchCriteria.city) {
-            matches = matches && restaurant.city === searchCriteria.city;
-          }
-          if (searchCriteria.parish) {
-            matches = matches && restaurant.parish === searchCriteria.parish;
+            matches = matches && (
+              restaurant.name.toLowerCase().includes(searchCriteria.name.toLowerCase()) ||
+              restaurant.district.toLowerCase().includes(searchCriteria.name.toLowerCase()) ||
+              restaurant.city.toLowerCase().includes(searchCriteria.name.toLowerCase())
+            );
           }
           if (searchCriteria.selectedCategories && searchCriteria.selectedCategories.length > 0) {
             matches = matches && searchCriteria.selectedCategories.some(category => restaurant.tags.includes(category));
           }
+
           return matches;
         });
 
