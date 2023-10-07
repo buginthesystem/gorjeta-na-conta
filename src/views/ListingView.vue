@@ -10,6 +10,7 @@
         <option value="createdAt">Most Recently Added</option>
       </select>
     </label>
+    <div class="filter-counter" v-if="displayedResultsMessage">{{ displayedResultsMessage }}s</div>
     <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
     <div v-else>No results</div>
     <!-- Pagination -->
@@ -46,6 +47,15 @@
     computed: {
       totalPages() {
         return Math.ceil(this.filteredRestaurants.length / this.itemsPerPage);
+      },
+      displayedResultsMessage() {
+        const count = this.filteredRestaurants.length;
+        if (count === 1) {
+          return 'Found 1 result';
+        } else if (count > 1) {
+          return `Found ${count} results`;
+        }
+        return '';
       },
     },
     mounted() {
@@ -121,5 +131,9 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.filter-counter {
+  margin: 1rem 0;
+  color: red;
+}
 </style>
