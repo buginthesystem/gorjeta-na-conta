@@ -8,9 +8,27 @@
   "district": "Lisboa",
   "place_id": "stringrandom1",
   "tags": [
-    "Gorjeta na conta",
-    "Só fala inglês",
-    "Atende turistas primeiro"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-02-06T19:15:08.292Z"
@@ -22,7 +40,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -34,7 +53,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom2",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-01-06T19:15:08.292Z"
@@ -46,7 +71,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -58,7 +84,13 @@
   "district": "Porto",
   "place_id": "stringrandom3",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-01-05T19:15:08.292Z"
@@ -70,7 +102,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": null
 },
 {
   "_id": {
@@ -82,7 +115,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom4",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-06T19:15:08.292Z"
@@ -94,7 +133,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -106,9 +146,27 @@
   "district": "Lisboa",
   "place_id": "stringrandom5",
   "tags": [
-    "Gorjeta na conta",
-    "Só fala inglês",
-    "Atende turistas primeiro"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-03-06T19:15:08.292Z"
@@ -120,7 +178,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -132,7 +191,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom6",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-06T19:15:08.292Z"
@@ -144,7 +209,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -156,8 +222,20 @@
   "district": "Lisboa",
   "place_id": "stringrandom7",
   "tags": [
-    "Só fala inglês",
-    "Atende turistas primeiro"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-04-06T19:15:08.292Z"
@@ -169,7 +247,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -181,7 +260,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom8",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-05-05T19:15:08.292Z"
@@ -193,7 +278,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -205,7 +291,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom9",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-05-06T19:15:08.292Z"
@@ -217,7 +309,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -229,7 +322,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom10",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-07-06T19:15:08.292Z"
@@ -241,7 +340,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -253,9 +353,27 @@
   "district": "Lisboa",
   "place_id": "stringrandom11",
   "tags": [
-    "Gorjeta na conta",
-    "Só fala inglês",
-    "Atende turistas primeiro"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-08-06T19:15:08.292Z"
@@ -267,7 +385,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -279,8 +398,20 @@
   "district": "Lisboa",
   "place_id": "stringrandom12",
   "tags": [
-    "Gorjeta na conta",
-    "Só fala inglês"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-09-06T19:15:08.292Z"
@@ -292,7 +423,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -304,7 +436,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom13",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-01T19:15:08.292Z"
@@ -316,7 +454,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -328,7 +467,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom14",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-02T19:15:08.292Z"
@@ -340,7 +485,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -352,7 +498,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom15",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-03T19:15:08.292Z"
@@ -364,7 +516,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -376,7 +529,13 @@
   "district": "Lisboa",
   "place_id": "stringrandom16",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-04T19:15:08.292Z"
@@ -388,7 +547,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -400,7 +560,13 @@
   "district": "Lisboa",
   "place_id": "ChIJSxanadXMHg0RRcamzk6lZUI",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "1970-01-01T00:00:00.000Z"
@@ -413,7 +579,8 @@
   "confirmers": [
     "127.0.0.1",
     "::1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -425,7 +592,13 @@
   "district": "Lisboa",
   "place_id": "ChIJqQTTFFIzGQ0R-2XK9V2TCXk",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-06T19:15:08.292Z"
@@ -437,7 +610,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -449,7 +623,13 @@
   "district": "Lisboa",
   "place_id": "ChIJ-ea5rHwzGQ0RMaYYQM9PkiQ",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "createdAt": {
     "$date": "2023-10-06T19:33:41.994Z"
@@ -461,7 +641,8 @@
   "confirmations": 1,
   "confirmers": [
     "127.0.0.1"
-  ]
+  ],
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -473,7 +654,13 @@
   "district": "Lisboa",
   "place_id": "ChIJeyyw8F0zGQ0RSM6Bg6LuenI",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "confirmations": 1,
   "confirmers": [
@@ -485,7 +672,8 @@
   "updatedAt": {
     "$date": "2023-10-06T21:09:46.073Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -497,20 +685,38 @@
   "district": "Lisboa",
   "place_id": "ChIJsz_8Z2czGQ0RIym84goMTwc",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "120.249.247.182"
+      ],
+      "_id": {
+        "$oid": "652485500496579685e42e12"
+      }
+    }
   ],
   "url": "https://maps.google.com/?cid=526652922318825763",
-  "confirmations": 1,
+  "confirmations": 2,
   "confirmers": [
-    "::1"
+    "::1",
+    "120.249.247.182"
   ],
   "createdAt": {
     "$date": "2023-10-06T21:26:11.960Z"
   },
   "updatedAt": {
-    "$date": "2023-10-06T21:26:11.960Z"
+    "$date": "2023-10-09T22:57:20.179Z"
   },
-  "__v": 0
+  "__v": 1,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -522,7 +728,13 @@
   "district": "Lisboa",
   "place_id": "ChIJW3H9LkXLHg0RZZZttMb27_8",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=18442230332396508773",
   "confirmations": 1,
@@ -535,7 +747,8 @@
   "updatedAt": {
     "$date": "2023-10-06T21:29:09.113Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -547,7 +760,13 @@
   "district": "Braga",
   "place_id": "ChIJfZscjzNSJA0R27eESbsqV9U",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=15372802836933162971",
   "confirmations": 1,
@@ -560,7 +779,8 @@
   "updatedAt": {
     "$date": "2023-10-06T21:40:40.363Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -572,7 +792,13 @@
   "district": "Lisboa",
   "place_id": "ChIJr8noDQ81GQ0RQi8_yjKsRYw",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=10107674272844427074",
   "confirmations": 1,
@@ -585,7 +811,8 @@
   "updatedAt": {
     "$date": "2023-10-06T21:54:36.185Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -597,7 +824,13 @@
   "district": "Porto",
   "place_id": "ChIJDySWRgtvJA0RWdWHcqDYhjg",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=4073181096631063897",
   "confirmations": 1,
@@ -610,7 +843,8 @@
   "updatedAt": {
     "$date": "2023-10-06T22:22:16.712Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -622,7 +856,13 @@
   "district": "Lisboa",
   "place_id": "ChIJMQUZwuMyGQ0RGMfI09lpJUQ",
   "tags": [
-    "Gorjeta na conta"
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=4910447352999364376",
   "confirmations": 1,
@@ -635,7 +875,8 @@
   "updatedAt": {
     "$date": "2023-10-06T23:01:38.979Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -647,7 +888,13 @@
   "district": "Lisboa",
   "place_id": "ChIJz7Mew2YzGQ0RqC8D468aEjk",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=4112378752472919976",
   "confirmations": 1,
@@ -660,7 +907,8 @@
   "updatedAt": {
     "$date": "2023-10-06T23:26:03.024Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -672,7 +920,13 @@
   "district": "Faro",
   "place_id": "ChIJ_WosA2K3Gg0RZkAsbsuAxiY",
   "tags": [
-    "Só fala inglês"
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=2794062230045081702",
   "confirmations": 1,
@@ -685,7 +939,8 @@
   "updatedAt": {
     "$date": "2023-10-07T00:13:51.591Z"
   },
-  "__v": 0
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
 },
 {
   "_id": {
@@ -697,7 +952,13 @@
   "district": "Lisboa",
   "place_id": "ChIJ8-G9nXczGQ0RsR3RIBJ7Il0",
   "tags": [
-    "Atende turistas primeiro"
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
   ],
   "url": "https://maps.google.com/?cid=6711061712525663665",
   "confirmations": 1,
@@ -709,6 +970,466 @@
   },
   "updatedAt": {
     "$date": "2023-10-07T00:16:17.700Z"
+  },
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "6521d5b252c241377237a26c"
+  },
+  "name": "Honest Greens Amoreiras",
+  "address": "Ed. Amoreiras Plaza, Rua Maria Ulrich 1 loja 11/12, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJK2OJNtwzGQ0RkBu5KLDAsQ0",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
+  ],
+  "url": "https://maps.google.com/?cid=986781656200846224",
+  "confirmations": 1,
+  "confirmers": [
+    "127.0.0.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-07T22:03:30.431Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-07T22:03:30.431Z"
+  },
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "6521d8950f536b1f0956828e"
+  },
+  "name": "Danone",
+  "address": "Zen Tower, Avenida Dom João II 41, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJfz3e0bYxGQ0RzBAIISVWaFk",
+  "tags": [
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "127.0.0.1"
+      ]
+    }
+  ],
+  "url": "https://maps.google.com/?cid=6442493984421449932",
+  "confirmations": 3,
+  "confirmers": [
+    "127.0.0.1",
+    "225.97.134.70",
+    "196.160.231.32"
+  ],
+  "createdAt": {
+    "$date": "2023-10-07T22:15:50.001Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-07T22:22:43.893Z"
+  },
+  "__v": 2,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "6524587d255e7b4832d5041b"
+  },
+  "name": "Verde Lima",
+  "address": "Rua Cardeal Saraiva, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJe4YaPRQzGQ0RxEcxiWFJm48",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 6,
+      "voters": [
+        "29.17.183.161",
+        "194.76.199.147",
+        "249.16.159.235",
+        "55.174.184.32",
+        "169.136.82.96",
+        "34.46.70.225"
+      ],
+      "_id": {
+        "$oid": "6524587d255e7b4832d5041c"
+      }
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 2,
+      "voters": [
+        "163.0.109.224",
+        "249.16.159.235"
+      ],
+      "_id": {
+        "$oid": "652458b0255e7b4832d50422"
+      }
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "218.118.92.237"
+      ],
+      "_id": {
+        "$oid": "65245f813f6d1352a77c7e6e"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=10347945252076210116",
+  "confirmations": 8,
+  "confirmers": [
+    "29.17.183.161",
+    "163.0.109.224",
+    "194.76.199.147",
+    "218.118.92.237",
+    "249.16.159.235",
+    "55.174.184.32",
+    "169.136.82.96",
+    "34.46.70.225"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T19:46:05.492Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T20:53:02.118Z"
+  },
+  "__v": 7,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "652468b7ca8f35a1fd4b5e0a"
+  },
+  "name": "Dedicated Store Lisboa",
+  "address": "Rua do Sol ao Rato 23A, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJRW_yRczNHg0Rt2BQjT7Vz4Y",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "91.131.201.66"
+      ],
+      "_id": {
+        "$oid": "652468b7ca8f35a1fd4b5e0b"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=9714217385896992951",
+  "confirmations": 1,
+  "confirmers": [
+    "91.131.201.66"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T20:55:19.606Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T20:55:19.606Z"
+  },
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "652469c9ca8f35a1fd4b5e0f"
+  },
+  "name": "ERCASOL",
+  "address": "Vila Nova de Poiares",
+  "city": "Vila Nova de Poiares",
+  "district": "Coimbra District",
+  "place_id": "ChIJ9dJhumfkIg0RpXfGPo8yvKg",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 2,
+      "voters": [
+        "81.251.128.72",
+        "150.75.172.71"
+      ],
+      "_id": {
+        "$oid": "652469c9ca8f35a1fd4b5e10"
+      }
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "150.75.172.71"
+      ],
+      "_id": {
+        "$oid": "65246a1aca8f35a1fd4b5e16"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=12158648684808402853",
+  "confirmations": 2,
+  "confirmers": [
+    "81.251.128.72",
+    "150.75.172.71"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T20:59:53.423Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T21:01:14.521Z"
+  },
+  "__v": 1,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "65247043bdadc612fc212a8b"
+  },
+  "name": "Entretanto Rooftop Bar @ Hotel Chiado",
+  "address": "Rua Nova do Almada 114, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJkbun13g0GQ0RNoWc_uqQV7M",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 2,
+      "voters": [
+        "143.140.202.219",
+        "69.136.121.1"
+      ],
+      "_id": {
+        "$oid": "65247043bdadc612fc212a8c"
+      }
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "46.175.29.195"
+      ],
+      "_id": {
+        "$oid": "65247082bdadc612fc212a92"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=12922956994731345206",
+  "confirmations": 3,
+  "confirmers": [
+    "143.140.202.219",
+    "46.175.29.195",
+    "69.136.121.1"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T21:27:31.071Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T21:34:35.616Z"
+  },
+  "__v": 2,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "65247ef1bdadc612fc212dcd"
+  },
+  "name": "Tasca da Esquina",
+  "address": "Rua Domingos Sequeira 41C, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJba78P2EzGQ0RM7v8st1bn8U",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "251.19.118.229"
+      ],
+      "_id": {
+        "$oid": "65247ef1bdadc612fc212dce"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=14240201554517605171",
+  "confirmations": 1,
+  "confirmers": [
+    "251.19.118.229"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T22:30:09.245Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T22:30:09.245Z"
+  },
+  "__v": 0,
+  "image_url": "https://place-hold.it/200x200/FF0000.png"
+},
+{
+  "_id": {
+    "$oid": "652481260496579685e42e06"
+  },
+  "name": "O Norte da China (Lisboa)",
+  "address": "Rua do Patrocínio 95A, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJqSReFmEzGQ0RsaZN9i_xFpI",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "177.191.64.143"
+      ],
+      "_id": {
+        "$oid": "652481260496579685e42e07"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=10526866367323154097",
+  "image_url": "https://place-hold.it/200x200/FF0000.png",
+  "confirmations": 1,
+  "confirmers": [
+    "177.191.64.143"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T22:39:34.904Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T22:39:34.904Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6524818b0496579685e42e0b"
+  },
+  "name": "Almassas",
+  "address": "Rua Saraiva de Carvalho 200, Lisboa",
+  "city": "Lisboa",
+  "district": "Lisboa",
+  "place_id": "ChIJk6rBWmEzGQ0RchedoPYO_zw",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "159.164.201.31"
+      ],
+      "_id": {
+        "$oid": "6524818b0496579685e42e0c"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=4395248213756286834",
+  "image_url": "https://place-hold.it/200x200/FF0000.png",
+  "confirmations": 1,
+  "confirmers": [
+    "159.164.201.31"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T22:41:15.443Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T22:41:15.443Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652485780496579685e42e16"
+  },
+  "name": "Bom Dia Portugal",
+  "address": "Avenida Manuel Alpedrinha 3, Reboleira",
+  "city": "Reboleira",
+  "district": "Lisboa",
+  "place_id": "ChIJ8QU4MR3NHg0RnjiSEgEfjMY",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "192.225.167.107"
+      ],
+      "_id": {
+        "$oid": "652485780496579685e42e17"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=14306844205716224158",
+  "image_url": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sATJ83zhgfoBbEHgkun5KR0abyDK7C20jsGxNKuSFyDzz4ZVPWjlPEkLKpjQ_uLQS5LdxlWM4-yOeiIPCaWpdJgcydkDDhw2jVFnE5W6bLTbKAvWc_4IHzYKl60HLEnWJmdftowb8mIY7RzCAOgIaebiMdiXeVvJ72zOZCak1ot2-c2PC25zt&3u400&5m1&2e1&callback=none&key=AIzaSyAFySBle6mbRZva3HZ11DfwLvIw2aCJMmM&token=14926",
+  "confirmations": 1,
+  "confirmers": [
+    "192.225.167.107"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T22:58:00.348Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T22:58:00.348Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652488640496579685e43101"
+  },
+  "name": "A Bolota",
+  "address": "426, Rua 1º de Maio 32, Portel",
+  "city": "Portel",
+  "district": "Évora",
+  "place_id": "ChIJP9NaSE2pEA0R4gdazWaqwhM",
+  "tags": [
+    {
+      "name": "Gorjeta na conta",
+      "count": 1,
+      "voters": [
+        "122.69.246.198"
+      ],
+      "_id": {
+        "$oid": "652488640496579685e43102"
+      }
+    },
+    {
+      "name": "Só fala inglês",
+      "count": 1,
+      "voters": [
+        "122.69.246.198"
+      ],
+      "_id": {
+        "$oid": "652488640496579685e43103"
+      }
+    },
+    {
+      "name": "Atende turistas primeiro",
+      "count": 1,
+      "voters": [
+        "122.69.246.198"
+      ],
+      "_id": {
+        "$oid": "652488640496579685e43104"
+      }
+    }
+  ],
+  "url": "https://maps.google.com/?cid=1423887790711113698",
+  "image_url": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sATJ83zgd0qy7C7tm4Ept4z8AQoDW2nkcLB5tQDsOc18-dpRNYC238yOA7QYeKjPXzVQWib8p1ISN8qRKOS6NgkSu6Noam-7ztp249tDMU9KVGZXjuJf55m4kInw-4mLy1-GV6hXQakI0ms1xTdbn6mguIrskxmFTDjCElDg0G8WQ_6gOzZP6&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyAFySBle6mbRZva3HZ11DfwLvIw2aCJMmM&token=27167",
+  "confirmations": 1,
+  "confirmers": [
+    "122.69.246.198"
+  ],
+  "createdAt": {
+    "$date": "2023-10-09T23:10:28.445Z"
+  },
+  "updatedAt": {
+    "$date": "2023-10-09T23:10:28.445Z"
   },
   "__v": 0
 }]

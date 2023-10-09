@@ -22,6 +22,18 @@
     <div v-if="errorMessage" class="error">
       {{ errorMessage }}
       <div v-if="showConfirmOption">
+        <div v-if="existingTags.length > 0">
+          <h4>You are vouching for these tags:</h4>
+          <ul>
+            <li v-for="tag in existingTags">{{ tag }}</li>
+          </ul>
+        </div>
+        <div v-if="addedTags.length > 0">
+          <h4>You are adding these new tags:</h4>
+          <ul>
+            <li v-for="tag in addedTags">{{ tag }}</li>
+          </ul>
+        </div>
         <button @click="confirmRestaurant">Yes, Confirm</button>
         <button @click="resetForm">No</button>
       </div>
@@ -46,7 +58,9 @@
         selectedTags: [],
         errorMessage: '',
         showConfirmOption: false,
-        showOptions: false
+        showOptions: false,
+        addedTags: [],
+        existingTags: [],
       };
     },
     methods: {
@@ -55,13 +69,16 @@
 
           console.log('Form is valid! GET /restaurants/:place_id');
 
-          axios.get(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}`)
+          const tagsParam = this.selectedTags.join(',');
+          axios.get(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}?tags=${tagsParam}`)
           .then(response => {
             if (response.data.notFound) {
               console.log('Form is valid! POST /restaurants');
               this.saveRestaurant();
             } else {
               this.errorMessage = "This restaurant already exists in our database.";
+              this.addedTags = response.data.addedTags;
+              this.existingTags = response.data.existingTags;
               this.showConfirmOption = true;
             }
           })
@@ -80,15 +97,32 @@
           place_id: this.selectedPlace.place_id,
           tags: this.selectedTags,
           url: this.selectedPlace.url,
+          image_url: this.selectedPlace.image_url
         };
 
         console.log('Form data:', formData);
 
         axios.post(`http://localhost:3002/restaurants`, formData)
         .then(response => {
+          //
+          // THIS NEEDS REVISON !!!
+          //
           if (response.data.action === 'confirm') {
-            console.log('Restaurant already exists! But it needs to be confirmed.');
-            this.errorMessage = "This restaurant already exists in our database.";
+            console.log('Restaurant already exists! But it needs to be confirmed.', response);
+            this.addedTags = response.data.addedTags;
+            this.existingTags = response.data.existingTags;
+            
+            let confirmMessage = "This restaurant already exists. ";
+            if (this.addedTags.length) {
+              confirmMessage += `You are adding ${this.addedTags.join(", ")} tag(s). `;
+            }
+           
+            if (this.existingTags.length) {
+              confirmMessage += `Existing tags for this restaurant: ${this.existingTags.join(", ")}. `;
+            }
+
+            confirmMessage += "Do you wish to proceed?";
+            this.errorMessage = confirmMessage;
             this.showConfirmOption = true;
           } else if (response.data.action === 'alreadyConfirmed') {
             this.errorMessage = "You have already confirmed this restaurant. We suggest browsing our current list or submitting a new entry.";
@@ -104,19 +138,25 @@
       },
       confirmRestaurant() {
         this.showConfirmOption = false;
-        axios.put(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}/confirm`)
+        axios.put(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}/confirm`, { tags: this.selectedTags })
         .then(response => {
+          if (response.data.action === 'tagsUpdated') {
+            this.errorMessage = response.data.message;
+          }
           this.$router.push('/success');
-          console.log('Restaurant confirmed successfully!');
+          console.log('Restaurant and tags confirmed successfully!');
         })
         .catch(error => {
           if (error.response && error.response.status === 400 && error.response.data.message === 'You have already confirmed this restaurant.') {
             this.errorMessage = error.response.data.message;
-            this.showOptions = true;  // Displaying the options (Browse list or Reset form)
+            this.showOptions = true;
           } else {
             this.errorMessage = 'There was an error confirming the restaurant. Please try again later.';
           }
         });
+
+        this.addedTags = [];
+        this.existingTags = [];
       },
       isValidForm() {
         let valid = true;
@@ -174,15 +214,41 @@
 
         autocomplete.addListener('place_changed', () => {
           const place = autocomplete.getPlace();
+
           console.log(place);
-          this.selectedPlace = {
-            name: place.name,
-            vicinity: place.vicinity,
-            city: place.address_components.find(component => component.types.includes('locality'))?.long_name || 'Unknown',
-            district: place.address_components.find(component => component.types.includes('administrative_area_level_1'))?.long_name || 'Unknown',
-            place_id: place.place_id,
-            url: place.url,
-          };
+
+          if (place.place_id) {
+            const service = new google.maps.places.PlacesService(placesInput);
+
+            service.getDetails({
+              placeId: place.place_id,
+              fields: ['name', 'vicinity', 'address_components', 'place_id', 'url', 'photos']
+            }, (placeResult, status) => {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+                console.log('placeResult', placeResult);
+
+                let imageUrl = "";
+
+                if (placeResult.photos && placeResult.photos.length > 0) {
+                  const photoOptions = {
+                    maxWidth: 200
+                  };
+                  imageUrl = placeResult.photos[0].getUrl(photoOptions);
+                }
+
+                this.selectedPlace = {
+                  name: placeResult.name,
+                  vicinity: placeResult.vicinity,
+                  city: placeResult.address_components.find(component => component.types.includes('locality'))?.long_name || 'Unknown',
+                  district: placeResult.address_components.find(component => component.types.includes('administrative_area_level_1'))?.long_name || 'Unknown',
+                  place_id: placeResult.place_id,
+                  url: placeResult.url,
+                  image_url: imageUrl
+                };
+              }
+            });
+          }
         });
       },
       resetForm() {
@@ -192,6 +258,8 @@
         this.errorMessage = '';
         this.showConfirmOption = false;
         this.showOptions = false;
+        this.addedTags = [];
+        this.existingTags = [];
       }
     },
     mounted() {

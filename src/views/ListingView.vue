@@ -8,9 +8,10 @@
         <option value="district">District</option>
         <option value="city">City</option>
         <option value="createdAt">Most Recently Added</option>
+        <option value="votes">Votes</option>
       </select>
     </label>
-    <div class="filter-counter" v-if="displayedResultsMessage">{{ displayedResultsMessage }}s</div>
+    <div class="filter-counter" v-if="displayedResultsMessage">{{ displayedResultsMessage }}</div>
     <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
     <div v-else>No results</div>
     <!-- Pagination -->
@@ -73,10 +74,16 @@
         }
       },
       sortRestaurants() {
-        if (this.sortBy === 'createdAt') {
-          this.filteredRestaurants = _.orderBy(this.filteredRestaurants, [this.sortBy], ['desc']);
-        } else {
-          this.filteredRestaurants = _.orderBy(this.filteredRestaurants, this.sortBy);
+        switch (this.sortBy) {
+          case 'createdAt':
+            this.filteredRestaurants = _.orderBy(this.filteredRestaurants, [this.sortBy], ['desc']);
+            break;
+          case 'votes':
+            this.filteredRestaurants = _.orderBy(this.filteredRestaurants, ['confirmations'], ['desc']);
+            break;
+          default:
+            this.filteredRestaurants = _.orderBy(this.filteredRestaurants, [this.sortBy]);
+            break;
         }
         this.currentPage = 1;
         this.updatePageRestaurants();

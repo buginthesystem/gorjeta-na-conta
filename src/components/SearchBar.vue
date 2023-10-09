@@ -39,8 +39,8 @@
         try {
           const response = await axios.get('http://localhost:3002/restaurants');
           const restaurants = response.data;
-          const allTags = restaurants.flatMap(restaurant => restaurant.tags);
-          this.allCategories = [...new Set(allTags)];
+          const allTagsNames = restaurants.flatMap(restaurant => restaurant.tags.map(tag => tag.name));
+          this.allCategories = [...new Set(allTagsNames)];
         } catch (error) {
           console.error("Error fetching restaurants for categories:", error);
         }

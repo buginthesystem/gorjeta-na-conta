@@ -1,6 +1,7 @@
 <template>
   <div class="restaurant-list">
     <div v-for="restaurant in restaurants" :key="restaurant._id" class="restaurant-item">
+      <img :src="imageSource(restaurant)" :alt="restaurant.name" @error="handleImageError">
       <div class="d-flex align-items-center justify-content-between">
         <h3><a :href="restaurant.url" target="_blank">{{ restaurant.name }}</a></h3>
         <span><strong>Votos:</strong> {{ restaurant.confirmations }}</span>
@@ -8,19 +9,38 @@
       <p><strong>Morada:</strong> {{ restaurant.address }}, {{ restaurant.district }}</p>
       <div v-if="restaurant.tags && restaurant.tags.length > 0" class="tags">
         <strong>Categorias:</strong>
-        <span v-for="tag in restaurant.tags" :key="tag" class="tag">{{ tag }}</span>
+        <span v-for="tag in restaurant.tags" :key="tag._id" class="tag">
+          {{ tag.name }} ({{ tag.count }})
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import fallbackImage from '@/assets/logo.svg';
+
 export default {
   name: 'RestaurantList',
   props: {
     restaurants: {
       type: Array,
       required: true,
+    }
+  },
+  computed: {
+    imageSource() {
+      return restaurant => {
+        if (!restaurant.image_url) {
+          return fallbackImage;
+        }
+        return restaurant.image_url;
+      };
+    }
+  },
+  methods: {
+    handleImageError(event) {
+      event.target.src = fallbackImage;
     }
   }
 };
@@ -31,6 +51,12 @@ export default {
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
+
+    img {
+      width: 200px;
+      max-height: 200px;
+      object-fit: cover;
+    }
 
     .tags {
       margin-top: 0.5rem;
