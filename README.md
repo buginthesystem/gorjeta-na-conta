@@ -93,6 +93,10 @@ In the root directory, run:
 npm run build
 ```
 
+## Files necessary for the project to run but not included in the repository
+.env
+.db_dump
+
 The frontend application should now be running, typically here: http://127.0.0.1:5173/
 
 Access the Application:  

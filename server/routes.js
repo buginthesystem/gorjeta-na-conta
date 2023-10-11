@@ -2,25 +2,8 @@ const express = require('express');
 const Restaurant = require('./models/Restaurant');
 const router = express.Router();
 
-// const getIpAddress = (req) => {
-//     if (process.env.NODE_ENV === 'development') {
-//         return '127.0.0.1';
-//     }
-//     return req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-// };
-
-const getRandomIp = () => {
-    return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
-};
-
-const getIpAddress = (req) => {
-    if (process.env.NODE_ENV === 'development-same-ip') {
-        return '127.0.0.1';
-    }
-    if (process.env.NODE_ENV === 'development') {
-        return getRandomIp();  // Return randomized IP in development mode
-    }
-    return req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+const getAnonymousToken = (req) => {
+    return req.headers['session-identifier'];
 };
 
 router.get('/restaurants', async (req, res) => {
@@ -69,11 +52,11 @@ router.get('/restaurants/:place_id', async (req, res) => {
     }
 });
 
-
 router.post('/restaurants', async (req, res) => {
     try {
-        const ip = getIpAddress(req);
+        const token = getAnonymousToken(req);
         const existingRestaurant = await Restaurant.findOne({ place_id: req.body.place_id });
+        
 
         let existingTags = [];
         let addedTags = [];
@@ -83,14 +66,14 @@ router.post('/restaurants', async (req, res) => {
                 const tagIndex = existingRestaurant.tags.findIndex(t => t.name === tag);
                 
                 if (tagIndex === -1) {
-                    // Tag doesn't exist, add it and set the count to 1, and add the user's IP to the voters
-                    existingRestaurant.tags.push({ name: tag, count: 1, voters: [ip] });
+                    // Tag doesn't exist, add it and set the count to 1, and add the user's IP token to the voters
+                    existingRestaurant.tags.push({ name: tag, count: 1, voters: [token] });
                     addedTags.push(tag);
                 } else {
-                    // Tag exists, check if the IP is not in the voters list
-                    if (!existingRestaurant.tags[tagIndex].voters.includes(ip)) {
+                    // Tag exists, check if the token is not in the voters list
+                    if (!existingRestaurant.tags[tagIndex].voters.includes(token)) {
                         existingRestaurant.tags[tagIndex].count += 1;
-                        existingRestaurant.tags[tagIndex].voters.push(ip);
+                        existingRestaurant.tags[tagIndex].voters.push(token);
                         existingTags.push(tag);
                     }
                 }
@@ -124,8 +107,8 @@ router.post('/restaurants', async (req, res) => {
         // If the restaurant does not exist in the database, create a new one
         const restaurant = new Restaurant({
             ...req.body,
-            tags: req.body.tags.map(tag => ({ name: tag, count: 1, voters: [ip] })),
-            confirmers: [ip]
+            tags: req.body.tags.map(tag => ({ name: tag, count: 1, voters: [token] })),
+            confirmers: [token]
         });
 
         await restaurant.save();
@@ -137,22 +120,21 @@ router.post('/restaurants', async (req, res) => {
     }
 });
 
-
 router.put('/restaurants/:place_id/confirm', async (req, res) => {
     try {
-        const ip = getIpAddress(req);
+        const token = getAnonymousToken(req); 
         const restaurant = await Restaurant.findOne({ place_id: req.params.place_id });
 
         if (!restaurant) {
             return res.status(404).send({ message: 'Restaurant not found.' });
         }
 
-        if (restaurant.confirmers.includes(ip)) {
+        if (restaurant.confirmers.includes(token)) {
             return res.status(400).send({ message: 'You have already confirmed this restaurant.' });
         }
 
         restaurant.confirmations += 1;
-        restaurant.confirmers.push(ip);
+        restaurant.confirmers.push(token);
 
         let existingTags = [];
         let addedTags = [];
@@ -161,14 +143,14 @@ router.put('/restaurants/:place_id/confirm', async (req, res) => {
             const tagIndex = restaurant.tags.findIndex(t => t.name === tag);
             
             if (tagIndex === -1) {
-                // Tag doesn't exist, add it and set the count to 1, and add the user's IP to the voters
-                restaurant.tags.push({ name: tag, count: 1, voters: [ip] });
+                // Tag doesn't exist, add it and set the count to 1, and add the user's token to the voters
+                restaurant.tags.push({ name: tag, count: 1, voters: [token] });
                 addedTags.push(tag);
             } else {
-                // Tag exists, check if the IP is not in the voters list
-                if (!restaurant.tags[tagIndex].voters.includes(ip)) {
+                // Tag exists, check if the token is not in the voters list
+                if (!restaurant.tags[tagIndex].voters.includes(token)) {
                     restaurant.tags[tagIndex].count += 1;
-                    restaurant.tags[tagIndex].voters.push(ip);
+                    restaurant.tags[tagIndex].voters.push(token);
                     existingTags.push(tag);
                 }
             }
@@ -188,6 +170,5 @@ router.put('/restaurants/:place_id/confirm', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
-
 
 module.exports = router;

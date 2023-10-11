@@ -47,6 +47,7 @@
 
 <script>
   import axios from 'axios';
+  import { v4 as uuidv4 } from 'uuid'; 
 
   export default {
     name: 'SubmitForm',
@@ -61,6 +62,7 @@
         showOptions: false,
         addedTags: [],
         existingTags: [],
+        anonymousToken: null,
       };
     },
     methods: {
@@ -89,6 +91,7 @@
       },
       saveRestaurant() {
         console.log('Saving restaurant...');
+        
         const formData = {
           name: this.selectedPlace.name,
           address: this.selectedPlace.vicinity,
@@ -102,7 +105,11 @@
 
         console.log('Form data:', formData);
 
-        axios.post(`http://localhost:3002/restaurants`, formData)
+        const config = {
+          headers: { 'session-identifier': this.anonymousToken}
+        };
+
+        axios.post(`http://localhost:3002/restaurants`, formData, config)
         .then(response => {
           //
           // THIS NEEDS REVISON !!!
@@ -138,7 +145,13 @@
       },
       confirmRestaurant() {
         this.showConfirmOption = false;
-        axios.put(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}/confirm`, { tags: this.selectedTags })
+
+        const config = {
+          headers: { 'session-identifier': this.anonymousToken }
+        };
+
+
+        axios.put(`http://localhost:3002/restaurants/${this.selectedPlace.place_id}/confirm`, { tags: this.selectedTags }, config)
         .then(response => {
           if (response.data.action === 'tagsUpdated') {
             this.errorMessage = response.data.message;
@@ -260,9 +273,18 @@
         this.showOptions = false;
         this.addedTags = [];
         this.existingTags = [];
-      }
+      },
+      getUserToken() {
+        let token = localStorage.getItem('session-identifier');
+        if (!token) {
+          token = uuidv4();
+          localStorage.setItem('session-identifier', token);
+        }
+        this.anonymousToken = token;
+      },
     },
     mounted() {
+      this.getUserToken();
       this.initializeGooglePlacesAPI();
     }
   };
