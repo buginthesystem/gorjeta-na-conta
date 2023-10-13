@@ -250,6 +250,8 @@
                   imageUrl = placeResult.photos[0].getUrl(photoOptions);
                 }
 
+                console.log('imageUrl', imageUrl);
+
                 this.selectedPlace = {
                   name: placeResult.name,
                   vicinity: placeResult.vicinity,

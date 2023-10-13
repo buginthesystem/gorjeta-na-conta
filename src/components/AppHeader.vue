@@ -1,17 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link class="navbar-brand" to="/">Gorjeta na Conta</router-link>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link class="nav-link" to="/listing" exact>Listing</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/submit" exact>Submit</router-link>
-        </li>
-      </ul>
+  <!-- header -->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <router-link class="navbar-brand" to="/">Gorjeta na Conta</router-link>
+              <div class="navbar-collapse">
+                <ul class="navbar-ul mr-auto">
+                  <li class="navbar-item">
+                    <router-link class="navbar-link" to="/listing" exact>Listing</router-link>
+                  </li>
+                  <li class="navbar-item">
+                    <router-link class="navbar-link" to="/submit" exact>Submit</router-link>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
 </template>
   
 <script>
@@ -20,17 +31,27 @@
   }
 </script>
   
-<style scoped>
-.nav-link {
+<style lang="scss" scoped>
+.navbar {
+  &-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &-link {
     text-decoration: none;
     color: black;
     margin-right: 10px;
+  }
 }
-
 .router-link-exact-active {
     font-weight: bold;
     text-decoration: underline;
-    color: blue;
+    color: black;
 }
 </style>
   

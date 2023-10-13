@@ -1,4 +1,6 @@
 <template>
+  <HeroBanner />
+  <div class="container">
     <div class="row">
       <h1 class="col-12">Homepage</h1>
       <div class="col-6">
@@ -20,14 +22,17 @@
         <LatestRestaurants />
       </div>
     </div>
+  </div>
 </template>
   
 <script>
   import LatestRestaurants from '@/components/LatestRestaurants.vue';
+  import HeroBanner from '@/components/HeroBanner.vue';
 
   export default {
     components: {
       LatestRestaurants,
+      HeroBanner
     },
     name: 'HomeView',
   };
