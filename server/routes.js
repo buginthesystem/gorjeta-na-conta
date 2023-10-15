@@ -1,14 +1,30 @@
+const dotenv = require('dotenv');
+const path = require('path');
 const express = require('express');
 const Restaurant = require('./models/Restaurant');
 const router = express.Router();
+
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const getAnonymousToken = (req) => {
     return req.headers['session-identifier'];
 };
 
+function replaceApiKeyPlaceholder(urlWithPlaceholder) {
+    const apiKey = process.env.GOOGLE_API_KEY;
+    return urlWithPlaceholder.replace('key=googlePlacesApiKey', `key=${apiKey}`);
+  }
+  
+
 router.get('/restaurants', async (req, res) => {
     try {
-        const restaurants = await Restaurant.find({});
+        let restaurants = await Restaurant.find({});
+        restaurants = restaurants.map(restaurant => {
+            if (restaurant.image_url) {
+                restaurant.image_url = replaceApiKeyPlaceholder(restaurant.image_url);
+            }
+            return restaurant;
+        });
         res.status(200).send(restaurants);
     } catch (error) {
         console.error("Error fetching restaurants:", error);
@@ -22,6 +38,10 @@ router.get('/restaurants/:place_id', async (req, res) => {
         
         if (!restaurant) {
             return res.status(200).send({ notFound: true });
+        }
+
+        if (restaurant.image_url) {
+            restaurant.image_url = replaceApiKeyPlaceholder(restaurant.image_url);
         }
     
         let existingTags = []; 

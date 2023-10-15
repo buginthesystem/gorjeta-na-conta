@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div id="app">
     <AppHeader />
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
       <router-view />
     </div>
     <AppFooter />

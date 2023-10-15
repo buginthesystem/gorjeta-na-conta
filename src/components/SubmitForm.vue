@@ -241,16 +241,17 @@
 
                 console.log('placeResult', placeResult);
 
-                let imageUrl = "";
+                let imageUrlPlaceholder = "";
 
                 if (placeResult.photos && placeResult.photos.length > 0) {
                   const photoOptions = {
                     maxWidth: 200
                   };
-                  imageUrl = placeResult.photos[0].getUrl(photoOptions);
+                  let imageUrl = placeResult.photos[0].getUrl(photoOptions);
+                  imageUrlPlaceholder = imageUrl.replace(/key=.*?&/, 'key=googlePlacesApiKey&');
                 }
 
-                console.log('imageUrl', imageUrl);
+                console.log('imageUrl', imageUrlPlaceholder);
 
                 this.selectedPlace = {
                   name: placeResult.name,
@@ -259,8 +260,10 @@
                   district: placeResult.address_components.find(component => component.types.includes('administrative_area_level_1'))?.long_name || 'Unknown',
                   place_id: placeResult.place_id,
                   url: placeResult.url,
-                  image_url: imageUrl
+                  image_url: imageUrlPlaceholder
                 };
+
+                console.log('this.selectedPlace', this.selectedPlace);
               }
             });
           }

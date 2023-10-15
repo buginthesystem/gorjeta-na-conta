@@ -1,24 +1,26 @@
 <template>
-  <div>
-    <SearchBar @update-search="updateSearch" ref="searchBarRef"/>
-    <label>
-      Sort By: 
-      <select v-model="sortBy">
-        <option value="name">Name</option>
-        <option value="district">District</option>
-        <option value="city">City</option>
-        <option value="createdAt">Most Recently Added</option>
-        <option value="votes">Votes</option>
-      </select>
-    </label>
-    <div class="filter-counter" v-if="displayedResultsMessage">{{ displayedResultsMessage }}</div>
-    <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
-    <div v-else>No results</div>
-    <!-- Pagination -->
-    <div class="pagination" v-if="filteredRestaurants.length > itemsPerPage">
-      <button @click="prevPage" :disabled="currentPage === 1">Previous</button>
-      <span>Page {{ currentPage }} of {{ totalPages }}</span>
-      <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+  <div class="container">
+    <div class="row">
+      <SearchBar @update-search="updateSearch" ref="searchBarRef"/>
+      <label class="col-12">
+        Sort By: 
+        <select v-model="sortBy">
+          <option value="name">Name</option>
+          <option value="district">District</option>
+          <option value="city">City</option>
+          <option value="createdAt">Most Recently Added</option>
+          <option value="votes">Votes</option>
+        </select>
+      </label>
+      <div class="filter-counter col-12" v-if="displayedResultsMessage">{{ displayedResultsMessage }}</div>
+      <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
+      <div v-else>No results</div>
+      <!-- Pagination -->
+      <div class="pagination col-12" v-if="filteredRestaurants.length > itemsPerPage">
+        <button @click="prevPage" :disabled="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+      </div>
     </div>
   </div>
 </template>
