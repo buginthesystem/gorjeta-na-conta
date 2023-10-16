@@ -14,12 +14,12 @@
       </label>
       <div class="filter-counter col-12" v-if="displayedResultsMessage">{{ displayedResultsMessage }}</div>
       <RestaurantList v-if="currentPageRestaurants.length > 0" :restaurants="currentPageRestaurants" />
-      <div v-else>No results</div>
+      <div v-else>Sem resultados</div>
       <!-- Pagination -->
       <div class="pagination col-12" v-if="filteredRestaurants.length > itemsPerPage">
-        <button @click="prevPage" :disabled="currentPage === 1">Previous</button>
-        <span>Page {{ currentPage }} of {{ totalPages }}</span>
-        <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+        <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
+        <span>Página {{ currentPage }} de {{ totalPages }}</span>
+        <button @click="nextPage" :disabled="currentPage === totalPages">Próximo</button>
       </div>
     </div>
   </div>
